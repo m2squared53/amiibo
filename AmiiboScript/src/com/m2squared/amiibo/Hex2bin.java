@@ -6,13 +6,14 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
+import static com.m2squared.amiibo.AmiiboConstants.*;
+
 public class Hex2bin {
-	public static final int NTAG215 = 540;
 
 	private ByteBuffer bin;
 	
 	public Hex2bin() {
-		this.bin = ByteBuffer.allocateDirect(NTAG215);
+		this.bin = ByteBuffer.allocateDirect(NTAG215_SIZE);
 	}
 			
 	public Hex2bin(int capacity) {
